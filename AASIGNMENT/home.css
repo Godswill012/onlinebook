@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+nav {
+    height: 70px;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px #ccc;
+}
+
+nav .nav-left, nav .nav-right {
+    display: flex;
+    align-items: center;
+    
+}
+nav .nav-left img {
+    width: 40px;
+    height: 40;
+}
+nav .nav-left input {
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 25px;
+    outline-width: none;
+    background-color: #eee;
+    margin-left: 10px;
+}
+nav .nav-middle {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+nav .nav-middle a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin: 0px 10px;
+}
+nav .nav-middle a.active {
+    color: royalblue;
+    position: relative;
+}    
+nav .nav-middle a .active::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: royalblue;
+}
+nav .nav-middle a svg {
+    font-size: 25px;
+}
+nav .nav-right .profile, .container .left-panel .profile {
+    background: url('images/ProfilePic_Male.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: 50px;
+    cursor: pointer;
+}
+nav .nav-right a {
+    text-decoration: none;
+    color: #333;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: #eee;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+}
+nav .nav-right a svg {
+    font-size: 18px;
+
+}
+.container {
+    background: #eee;
+    display: flex;
+}
+.container .left-panel {
+    width: 250px;
+}
+.container .left-panel ul {
+    padding: 10px 0px;
+}
+.container .left-panel ul li {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    padding: .7rem 1rem;
+    transition: .3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container .left-panel ul li:hover {
+    background: #ddd;
+}
+.container .left-panel ul li p {
+    margin-left: 10px;
+} 
+.container .left-panel ul li svg {
+    font-size: 20px;
+    color: slateblue;
+}
+.container .left-panel .footer-links {
+    padding: 5px 1rem;
+}  
+.container .left-panel .footer-links a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+}
+.container .middle-panel {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+.container .middle-panel .story-section {
+    display: flex;
+    padding: 1rem;
+}
+.container .middle-panel .story-section .story {
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s ease-in;
+    margin: 0px 5px;
+    box-shadow: 0 0  5px 5px #ddd;
+    background: #fff;
+}
+.container .middle-panel .story-section .story img {
+    height: 100%;
+    transition: .3s ease-in;
+}
+.container .middle-panel .story-section .story:hover img {
+    transform: scale(1.05);
+}
+
+.container .middle-panel .story-section .story .dp-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 4px solid royalblue;
+}
+.container .middle-panel .story-section .story .dp-container img {
+    height: 100%;
+    width: 100%;
+}
+.container .middle-panel .story-section .story .name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.container .middle-panel .story-section .story-create {
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s ease-in;
+    margin: 0px 5px;
+    box-shadow: 0 0  5px 5px #ddd;
+    background: #fff;
+} 
+.container .middle-panel .story-section .story-create .dp-image {
+    height: 80%;
+    overflow: hidden;
+}
+.container .middle-panel .story-section .story-create .dp-image img {
+    width: 100%;
+}
+.container .middle-panel .story-section .story-create .dp-container {
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+    background: royalblue;
+    border: 4px solid #fff;
+}
+.container .middle-panel .story-section .story-create .dp-container svg {
+    color: #fff;
+}
+.container .middle-panel .story-section .story-create .name {
+    color: #000;
+    font-size: 15px;
+    left: 10px;
+}
